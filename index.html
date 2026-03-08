@@ -106,6 +106,41 @@ Suscríbete a mi canal
 
 function generar(){
 
+window.open("https://www.youtube.com/@julixnxzz","_blank");
+
+setTimeout(function(){
+
+let device = document.getElementById("device").value;
+let dpi = document.getElementById("dpi").value;
+
+let general=90;
+let rojo=85;
+let mira2=80;
+let mira4=75;
+
+if(device=="baja"){
+general=95; rojo=92; mira2=88; mira4=80;
+}
+
+if(device=="media"){
+general=92; rojo=88; mira2=82; mira4=75;
+}
+
+if(device=="alta"){
+general=88; rojo=84; mira2=78; mira4=70;
+}
+
+document.getElementById("resultado").innerHTML=
+"General: "+general+"<br>"+
+"Punto Rojo: "+rojo+"<br>"+
+"Mira 2X: "+mira2+"<br>"+
+"Mira 4X: "+mira4+"<br>"+
+"DPI recomendado: "+dpi;
+
+},5000);
+
+}
+
 window.open("https://youtube.com/", "_blank");
 
 let device = document.getElementById("device").value;
