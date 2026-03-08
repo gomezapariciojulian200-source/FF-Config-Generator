@@ -1,83 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Generador Sensibilidad Free Fire</title>
+<title>Generador de Sensibilidad Free Fire</title>
 
 <style>
-
 body{
-margin:0;
+background:#0f172a;
+color:white;
 font-family:Arial;
 text-align:center;
-color:white;
-background:url("https://wallpapercave.com/wp/wp7418474.jpg");
-background-size:cover;
-background-attachment:fixed;
+padding:20px;
 }
 
-.container{
-background:rgba(0,0,0,0.75);
-margin:40px;
-padding:30px;
-border-radius:15px;
+.logo{
+width:320px;
+margin-bottom:20px;
 }
 
-h1{
-font-size:40px;
-color:#ff3c00;
-}
-
-select,input{
-padding:12px;
-font-size:18px;
+select,button{
+padding:10px;
 margin:10px;
-border-radius:10px;
+font-size:16px;
+border-radius:8px;
 border:none;
 }
 
 button{
-padding:16px 35px;
-font-size:20px;
-background:#ff3c00;
+background:#22c55e;
 color:white;
-border:none;
-border-radius:10px;
 cursor:pointer;
-transition:0.3s;
 }
 
-button:hover{
-transform:scale(1.1);
-background:red;
-}
-
-.resultado{
-font-size:22px;
+#resultado{
 margin-top:20px;
+font-size:20px;
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+
+.seccion{
+margin-top:40px;
+background:#1e293b;
+padding:20px;
+border-radius:10px;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<img class="logo" src="https://1000logos.net/wp-content/uploads/2021/09/Free-Fire-logo.png">
 
-<h1>Generador Sensibilidad Free Fire</h1>
+<h1>Generador de Sensibilidad</h1>
 
-<p>Tipo de dispositivo</p>
+<h3>Marca de tu celular</h3>
 
 <select id="device">
-<option value="baja">Gama baja</option>
-<option value="media">Gama media</option>
-<option value="alta">Gama alta</option>
+<option value="samsung">Samsung</option>
+<option value="xiaomi">Xiaomi</option>
+<option value="oppo">Oppo</option>
+<option value="iphone">iPhone</option>
+<option value="realme">Realme</option>
+<option value="motorola">Motorola</option>
+<option value="huawei">Huawei</option>
 </select>
 
-<p>FPS del juego</p>
+<h3>FPS del juego</h3>
 
 <select id="fps">
 <option value="60">60 FPS</option>
@@ -85,79 +75,177 @@ margin-top:20px;
 <option value="120">120 FPS</option>
 </select>
 
-<p>DPI de tu celular</p>
+<h3>DPI de tu celular</h3>
 
-<input id="dpi" placeholder="Ejemplo 400">
+<select id="dpi">
+<option value="400">400</option>
+<option value="500">500</option>
+<option value="600">600</option>
+<option value="700">700</option>
+</select>
 
 <br>
 
-<button onclick="generar()">GENERAR SENSIBILIDAD</button>
-
-<div class="resultado" id="resultado"></div>
+<button onclick="generar()">Generar Sensibilidad</button>
 
 <br><br>
 
-<a href="https://www.youtube.com/@julixnxzz" target="_blank">
-<button>Suscribete a mi canal</button>
-</a>
+<button onclick="abrirCanal()">Seguir mi canal de YouTube</button>
+
+<div id="resultado"></div>
+
+<div class="seccion">
+
+<h2>Sensibilidades de jugadores famosos</h2>
+
+<p>
+Raistar 🔥 <br>
+General 190<br>
+Rojo 180<br>
+2X 170<br>
+4X 160
+</p>
+
+<p>
+White444 🎯<br>
+General 180<br>
+Rojo 175<br>
+2X 165<br>
+4X 150
+</p>
+
+<p>
+Nobru ⚡<br>
+General 170<br>
+Rojo 165<br>
+2X 150<br>
+4X 140
+</p>
+
+</div>
+
+<div class="seccion">
+
+<h2>Personas que usaron esta página</h2>
+
+<p id="contador">0</p>
 
 </div>
 
 <script>
 
+function abrirCanal(){
+
+window.open("https://youtube.com/@julixnxzz","_blank");
+
+}
+
 function generar(){
 
-window.open("https://www.youtube.com/@julixnxzz","_blank");
-
-setTimeout(function(){
-
-let device=document.getElementById("device").value;
-let dpi=parseInt(document.getElementById("dpi").value) || 400;
+let device = document.getElementById("device").value;
+let fps = document.getElementById("fps").value;
+let dpi = document.getElementById("dpi").value;
 
 let general;
 let rojo;
 let mira2;
 let mira4;
-let awm;
 let boton;
 
-if(device=="baja"){
-general=195;
-rojo=190;
-mira2=180;
-mira4=170;
-awm=150;
-boton=75;
+if(device=="samsung"){
+
+general = 180 + Math.floor(Math.random()*20);
+rojo = 170 + Math.floor(Math.random()*20);
+mira2 = 160 + Math.floor(Math.random()*20);
+mira4 = 150 + Math.floor(Math.random()*20);
+boton = 55;
+
 }
 
-if(device=="media"){
-general=185;
-rojo=180;
-mira2=170;
-mira4=160;
-awm=145;
-boton=70;
+if(device=="xiaomi"){
+
+general = 185 + Math.floor(Math.random()*15);
+rojo = 175 + Math.floor(Math.random()*15);
+mira2 = 165 + Math.floor(Math.random()*15);
+mira4 = 150 + Math.floor(Math.random()*15);
+boton = 60;
+
 }
 
-if(device=="alta"){
-general=175;
-rojo=170;
-mira2=160;
-mira4=150;
-awm=135;
-boton=65;
+if(device=="oppo"){
+
+general = 175 + Math.floor(Math.random()*20);
+rojo = 165 + Math.floor(Math.random()*20);
+mira2 = 155 + Math.floor(Math.random()*20);
+mira4 = 145 + Math.floor(Math.random()*20);
+boton = 58;
+
 }
 
-document.getElementById("resultado").innerHTML=
+if(device=="iphone"){
+
+general = 170 + Math.floor(Math.random()*20);
+rojo = 160 + Math.floor(Math.random()*20);
+mira2 = 150 + Math.floor(Math.random()*20);
+mira4 = 140 + Math.floor(Math.random()*20);
+boton = 50;
+
+}
+
+if(device=="realme"){
+
+general = 185 + Math.floor(Math.random()*15);
+rojo = 175 + Math.floor(Math.random()*15);
+mira2 = 165 + Math.floor(Math.random()*15);
+mira4 = 155 + Math.floor(Math.random()*15);
+boton = 60;
+
+}
+
+if(device=="motorola"){
+
+general = 180 + Math.floor(Math.random()*20);
+rojo = 170 + Math.floor(Math.random()*20);
+mira2 = 160 + Math.floor(Math.random()*20);
+mira4 = 150 + Math.floor(Math.random()*20);
+boton = 58;
+
+}
+
+if(device=="huawei"){
+
+general = 175 + Math.floor(Math.random()*20);
+rojo = 165 + Math.floor(Math.random()*20);
+mira2 = 155 + Math.floor(Math.random()*20);
+mira4 = 145 + Math.floor(Math.random()*20);
+boton = 57;
+
+}
+
+document.getElementById("resultado").innerHTML =
+
 "General: "+general+"<br>"+
 "Punto Rojo: "+rojo+"<br>"+
 "Mira 2X: "+mira2+"<br>"+
 "Mira 4X: "+mira4+"<br>"+
-"AWM: "+awm+"<br>"+
-"Tamaño botón de disparo: "+boton+"<br>"+
-"DPI recomendado: "+dpi;
+"DPI recomendado: "+dpi+"<br>"+
+"Tamaño botón disparo: "+boton;
 
-},5000);
+let visitas = localStorage.getItem("visitas");
+
+if(visitas==null){
+
+visitas=1;
+
+}else{
+
+visitas = parseInt(visitas)+1;
+
+}
+
+localStorage.setItem("visitas",visitas);
+
+document.getElementById("contador").innerText = visitas;
 
 }
 
