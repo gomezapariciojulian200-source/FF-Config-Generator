@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FF Sensibilidad Pro</title>
+
+<title>Generador Sensibilidad FF</title>
 
 <style>
 
 body{
 margin:0;
 font-family:Arial;
-color:white;
 text-align:center;
+color:white;
 background:url("https://wallpapercave.com/wp/wp7418474.jpg");
 background-size:cover;
 background-attachment:fixed;
@@ -18,18 +20,18 @@ background-attachment:fixed;
 
 .container{
 background:rgba(0,0,0,0.7);
-padding:30px;
 margin:40px;
+padding:30px;
 border-radius:15px;
 }
 
 h1{
-color:#ff3c00;
 font-size:40px;
+color:#ff3c00;
 }
 
-select,button,input{
-padding:15px;
+select,input{
+padding:12px;
 font-size:18px;
 margin:10px;
 border-radius:10px;
@@ -37,25 +39,24 @@ border:none;
 }
 
 button{
+padding:15px 30px;
+font-size:20px;
 background:#ff3c00;
 color:white;
+border:none;
+border-radius:10px;
 cursor:pointer;
 transition:0.3s;
 }
 
 button:hover{
 transform:scale(1.1);
-background:#ff0000;
+background:red;
 }
 
 .resultado{
 font-size:22px;
 margin-top:20px;
-}
-
-.youtube{
-margin-top:20px;
-font-size:18px;
 }
 
 </style>
@@ -66,17 +67,17 @@ font-size:18px;
 
 <div class="container">
 
-<h1>Generador de Sensibilidad FF</h1>
+<h1>Generador Sensibilidad Free Fire</h1>
 
-<p>Selecciona tu tipo de dispositivo</p>
+<p>Tipo de dispositivo</p>
 
 <select id="device">
-<option value="baja">Gama Baja</option>
-<option value="media">Gama Media</option>
-<option value="alta">Gama Alta</option>
+<option value="baja">Gama baja</option>
+<option value="media">Gama media</option>
+<option value="alta">Gama alta</option>
 </select>
 
-<p>Selecciona tu FPS</p>
+<p>FPS del juego</p>
 
 <select id="fps">
 <option value="60">60 FPS</option>
@@ -84,7 +85,7 @@ font-size:18px;
 <option value="120">120 FPS</option>
 </select>
 
-<p>Tu DPI</p>
+<p>DPI de tu celular</p>
 
 <input id="dpi" placeholder="Ejemplo 400">
 
@@ -94,11 +95,11 @@ font-size:18px;
 
 <div class="resultado" id="resultado"></div>
 
-<div class="youtube">
+<br>
+
 <a href="https://www.youtube.com/@julixnxzz" target="_blank">
-Suscríbete a mi canal
+<button>Suscribete a mi canal</button>
 </a>
-</div>
 
 </div>
 
@@ -110,8 +111,8 @@ window.open("https://www.youtube.com/@julixnxzz","_blank");
 
 setTimeout(function(){
 
-let device = document.getElementById("device").value;
-let dpi = document.getElementById("dpi").value;
+let device=document.getElementById("device").value;
+let dpi=document.getElementById("dpi").value;
 
 let general;
 let rojo;
@@ -139,7 +140,7 @@ mira2=78;
 mira4=70;
 }
 
-document.getElementById("resultado").innerHTML =
+document.getElementById("resultado").innerHTML=
 "General: "+general+"<br>"+
 "Punto Rojo: "+rojo+"<br>"+
 "Mira 2X: "+mira2+"<br>"+
@@ -147,38 +148,6 @@ document.getElementById("resultado").innerHTML =
 "DPI recomendado: "+dpi;
 
 },5000);
-
-}
-
-window.open("https://youtube.com/", "_blank");
-
-let device = document.getElementById("device").value;
-let fps = document.getElementById("fps").value;
-let dpi = document.getElementById("dpi").value;
-
-let general = 90;
-let rojo = 85;
-let mira2 = 80;
-let mira4 = 75;
-
-if(device=="baja"){
-general=95; rojo=92; mira2=88; mira4=80;
-}
-
-if(device=="media"){
-general=92; rojo=88; mira2=82; mira4=75;
-}
-
-if(device=="alta"){
-general=88; rojo=84; mira2=78; mira4=70;
-}
-
-document.getElementById("resultado").innerHTML =
-"General: "+general+"<br>"+
-"Punto Rojo: "+rojo+"<br>"+
-"Mira 2X: "+mira2+"<br>"+
-"Mira 4X: "+mira4+"<br>"+
-"DPI recomendado: "+dpi;
 
 }
 
