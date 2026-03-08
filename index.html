@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Generador de Sensibilidad FF</title>
+</head>
+
+<body style="background:black;color:white;text-align:center;font-family:Arial;">
+
+<h1>Generador de Sensibilidad Free Fire</h1>
+
+<select id="device">
+<option value="baja">Gama Baja</option>
+<option value="media">Gama Media</option>
+<option value="alta">Gama Alta</option>
+</select>
+
+<br><br>
+
+<button onclick="generar()">Generar</button>
+
+<p id="resultado"></p>
+
+<script>
+function generar(){
+
+let device = document.getElementById("device").value;
+
+if(device=="baja"){
+document.getElementById("resultado").innerText="General 95 | Punto rojo 92 | 2x 88 | 4x 80";
+}
+
+if(device=="media"){
+document.getElementById("resultado").innerText="General 92 | Punto rojo 88 | 2x 82 | 4x 75";
+}
+
+if(device=="alta"){
+document.getElementById("resultado").innerText="General 90 | Punto rojo 85 | 2x 80 | 4x 70";
+}
+
+}
+</script>
+
+</body>
+</html>
