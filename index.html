@@ -4,7 +4,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Generador Sensibilidad FF</title>
+<title>Generador Sensibilidad Free Fire</title>
 
 <style>
 
@@ -19,7 +19,7 @@ background-attachment:fixed;
 }
 
 .container{
-background:rgba(0,0,0,0.7);
+background:rgba(0,0,0,0.75);
 margin:40px;
 padding:30px;
 border-radius:15px;
@@ -39,7 +39,7 @@ border:none;
 }
 
 button{
-padding:15px 30px;
+padding:16px 35px;
 font-size:20px;
 background:#ff3c00;
 color:white;
@@ -95,7 +95,7 @@ margin-top:20px;
 
 <div class="resultado" id="resultado"></div>
 
-<br>
+<br><br>
 
 <a href="https://www.youtube.com/@julixnxzz" target="_blank">
 <button>Suscribete a mi canal</button>
@@ -112,32 +112,40 @@ window.open("https://www.youtube.com/@julixnxzz","_blank");
 setTimeout(function(){
 
 let device=document.getElementById("device").value;
-let dpi=document.getElementById("dpi").value;
+let dpi=parseInt(document.getElementById("dpi").value) || 400;
 
 let general;
 let rojo;
 let mira2;
 let mira4;
+let awm;
+let boton;
 
 if(device=="baja"){
-general=95;
-rojo=92;
-mira2=88;
-mira4=80;
+general=195;
+rojo=190;
+mira2=180;
+mira4=170;
+awm=150;
+boton=75;
 }
 
 if(device=="media"){
-general=92;
-rojo=88;
-mira2=82;
-mira4=75;
+general=185;
+rojo=180;
+mira2=170;
+mira4=160;
+awm=145;
+boton=70;
 }
 
 if(device=="alta"){
-general=88;
-rojo=84;
-mira2=78;
-mira4=70;
+general=175;
+rojo=170;
+mira2=160;
+mira4=150;
+awm=135;
+boton=65;
 }
 
 document.getElementById("resultado").innerHTML=
@@ -145,6 +153,8 @@ document.getElementById("resultado").innerHTML=
 "Punto Rojo: "+rojo+"<br>"+
 "Mira 2X: "+mira2+"<br>"+
 "Mira 4X: "+mira4+"<br>"+
+"AWM: "+awm+"<br>"+
+"Tamaño botón de disparo: "+boton+"<br>"+
 "DPI recomendado: "+dpi;
 
 },5000);
