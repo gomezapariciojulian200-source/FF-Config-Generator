@@ -84,8 +84,6 @@ padding:20px;
 margin-top:40px;
 }
 
-/* banner */
-
 .banner{
 background-image:url("https://wallpapercave.com/wp/wp10495959.jpg");
 background-size:cover;
@@ -100,8 +98,6 @@ padding:20px;
 border-radius:10px;
 display:inline-block;
 }
-
-/* personajes */
 
 .personajes{
 display:flex;
@@ -121,8 +117,6 @@ width:180px;
 width:100%;
 border-radius:10px;
 }
-
-/* tarjeta */
 
 .config-card{
 background:#0b0b0b;
@@ -163,6 +157,18 @@ max-width:400px;
 margin:20px auto;
 }
 
+.info-generador{
+background:#111;
+padding:30px;
+margin:40px;
+border-radius:10px;
+}
+
+.info-generador a{
+color:#00d4ff;
+text-decoration:none;
+}
+
 </style>
 
 </head>
@@ -180,6 +186,7 @@ margin:20px auto;
 <nav>
 <a href="#generador">Generador</a>
 <a href="#jugadores">Jugadores</a>
+<a href="#info">Guía</a>
 <a href="#contacto">Contacto</a>
 </nav>
 
@@ -274,25 +281,51 @@ ESPACIO PARA ANUNCIO
 
 </div>
 
-<div class="box">
+<!-- NUEVA GUIA QUE ME DISTE -->
 
-<h2>Personajes Populares</h2>
+<section class="info-generador" id="info">
 
-<div class="personajes">
+<h2>Generador de Sensibilidad para Free Fire</h2>
 
-<div class="personaje">
-<img src="https://static.wikia.nocookie.net/freefire/images/8/8c/Alok.png">
-<h3>Alok</h3>
-</div>
+<p>
+El generador de sensibilidad para Free Fire es una herramienta diseñada para calcular valores iniciales según el modelo del celular, el DPI de la pantalla y el comportamiento táctil del dispositivo.
+</p>
 
-<div class="personaje">
-<img src="https://static.wikia.nocookie.net/freefire/images/6/65/Kelly.png">
-<h3>Kelly</h3>
-</div>
+<p>
+El rendimiento puede variar según el <b>modelo del dispositivo</b>, el <b>DPI de la pantalla</b>, la tasa de respuesta, el HUD utilizado y la adaptación individual de cada jugador.
+</p>
 
-</div>
+<p>
+<b>Aviso:</b> ajusta la sensibilidad de forma gradual y pruébala en partidas reales hasta encontrar el equilibrio ideal entre velocidad y control.
+</p>
 
-</div>
+<h3>Últimos modelos buscados</h3>
+
+<ul>
+
+<li>📱 Samsung Galaxy A04</li>
+<li>📱 Xiaomi 14T</li>
+<li>📱 iPhone 13</li>
+<li>📱 iPhone 14</li>
+<li>📱 iPhone XR</li>
+<li>📱 Motorola Moto E13</li>
+<li>📱 iPhone 13 Pro Max</li>
+<li>📱 iPhone 11</li>
+
+</ul>
+
+<h3>Esto es útil para:</h3>
+
+<ul>
+
+<li>🎮 Jugadores nuevos</li>
+<li>📱 Quienes cambiaron de celular</li>
+<li>⚙️ Jugadores afectados por actualizaciones</li>
+<li>🔄 Usuarios que quieren reiniciar su sensibilidad</li>
+
+</ul>
+
+</section>
 
 <div class="box" id="contacto">
 
@@ -322,8 +355,6 @@ if(userAgent.includes("iphone")) telefono="iPhone"
 else if(userAgent.includes("samsung")) telefono="Samsung"
 else if(userAgent.includes("xiaomi")) telefono="Xiaomi"
 else if(userAgent.includes("oppo")) telefono="Oppo"
-else if(userAgent.includes("huawei")) telefono="Huawei"
-else if(userAgent.includes("realme")) telefono="Realme"
 
 document.getElementById("telefonoDetectado").innerHTML=telefono
 
@@ -368,13 +399,7 @@ let jugadores={
 "raistar":"General 200 | Rojo 190 | 2x 180 | 4x 170 | AWM 130",
 "white444":"General 195 | Rojo 185 | 2x 175 | 4x 165 | AWM 125",
 "ajjubhai":"General 185 | Rojo 170 | 2x 160 | 4x 150 | AWM 120",
-"two side gamers":"General 188 | Rojo 178 | 2x 168 | 4x 158 | AWM 120",
-"culadoyt":"General 185 | Rojo 175 | 2x 165 | 4x 155 | AWM 115",
-"tinca":"General 180 | Rojo 170 | 2x 160 | 4x 150 | AWM 110",
-"ruok":"General 198 | Rojo 188 | 2x 178 | 4x 168 | AWM 130",
-"sk sabir":"General 190 | Rojo 180 | 2x 170 | 4x 160 | AWM 120",
-"lokesh gamer":"General 185 | Rojo 175 | 2x 165 | 4x 155 | AWM 120",
-"gyan gaming":"General 182 | Rojo 172 | 2x 162 | 4x 152 | AWM 115"
+"ruok":"General 198 | Rojo 188 | 2x 178 | 4x 168 | AWM 130"
 
 }
 
