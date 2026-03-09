@@ -5,11 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mejor Sensibilidad Free Fire | Generador para Pegar Todo Rojo</title>
+<title>Generador de Sensibilidad Free Fire | Pegar Todo Rojo</title>
 
 <meta name="description" content="Generador de sensibilidad Free Fire para pegar todo rojo. Encuentra configuraciones de jugadores famosos y mejora tus headshots.">
 
-<meta name="keywords" content="sensibilidad free fire, pegar todo rojo free fire, mejor sensibilidad free fire, configuracion free fire headshots">
+<meta name="keywords" content="sensibilidad free fire, pegar todo rojo free fire, configuracion free fire headshots">
 
 <style>
 
@@ -129,6 +129,61 @@ width:100%;
 border-radius:10px;
 }
 
+/* tarjeta configuración estilo app */
+
+.config-card{
+background:#0b0b0b;
+padding:20px;
+border-radius:12px;
+max-width:400px;
+margin:auto;
+box-shadow:0 0 10px rgba(0,0,0,0.6);
+}
+
+.config-title{
+font-size:22px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.config-item{
+display:flex;
+justify-content:space-between;
+padding:8px 0;
+border-bottom:1px solid #333;
+}
+
+.btn-big{
+background:#22c55e;
+padding:14px 30px;
+border:none;
+border-radius:30px;
+font-size:18px;
+color:white;
+cursor:pointer;
+margin-top:15px;
+}
+
+.btn-big:hover{
+background:#16a34a;
+}
+
+/* estrellas */
+
+.rating{
+font-size:24px;
+color:gold;
+}
+
+.rating-box{
+background:#e5e7eb;
+color:black;
+padding:15px;
+border-radius:10px;
+max-width:400px;
+margin:20px auto;
+}
+
 </style>
 
 </head>
@@ -136,23 +191,18 @@ border-radius:10px;
 <body>
 
 <div class="banner">
-
 <h1>🔥 Sensibilidad Free Fire para Pegar Todo Rojo</h1>
-
 </div>
 
 <header>
 
-<h1>🔥 Generador de Sensibilidad Free Fire</h1>
+<h1>Generador de Sensibilidad Free Fire</h1>
 
 <nav>
-
 <a href="#guia">Guía</a>
 <a href="#generador">Generador</a>
-<a href="#buscador">Buscar Jugadores</a>
-<a href="#headshots">Headshots</a>
+<a href="#buscador">Jugadores</a>
 <a href="#contacto">Contacto</a>
-
 </nav>
 
 </header>
@@ -161,14 +211,10 @@ border-radius:10px;
 
 <div class="box" id="guia">
 
-<h2>Guía Completa de Sensibilidad Free Fire</h2>
+<h2>Guía Completa de Sensibilidad</h2>
 
 <p>
-La sensibilidad en Free Fire determina qué tan rápido se mueve la mira cuando deslizas el dedo en la pantalla. Una configuración correcta puede ayudarte a mejorar la precisión y conseguir más headshots.
-</p>
-
-<p>
-Cada dispositivo tiene un rendimiento diferente dependiendo de sus FPS y del tamaño de la pantalla, por lo que es importante encontrar la configuración adecuada.
+La sensibilidad en Free Fire determina qué tan rápido se mueve la mira. Ajustarla correctamente puede ayudarte a conseguir más headshots.
 </p>
 
 </div>
@@ -177,31 +223,9 @@ Cada dispositivo tiene un rendimiento diferente dependiendo de sus FPS y del tam
 ESPACIO PARA ANUNCIO
 </div>
 
-<div class="box">
-
-<h2>¿Qué hace cada sensibilidad?</h2>
-
-<ul>
-
-<li><b>General:</b> controla el movimiento de la cámara.</li>
-
-<li><b>Punto rojo:</b> se usa en armas de corto alcance.</li>
-
-<li><b>Mira 2x:</b> mejora la precisión en combates medios.</li>
-
-<li><b>Mira 4x:</b> ayuda a controlar rifles con retroceso.</li>
-
-<li><b>AWM:</b> sensibilidad para francotiradores.</li>
-
-</ul>
-
-</div>
-
 <div class="box" id="generador">
 
 <h2>Generador Inteligente de Sensibilidad</h2>
-
-<p>Escribe el modelo de tu celular</p>
 
 <input id="telefono" placeholder="Ejemplo: Oppo Reno 7">
 
@@ -213,8 +237,55 @@ ESPACIO PARA ANUNCIO
 
 </div>
 
-<div class="ad">
-ESPACIO PARA ANUNCIO
+<div class="box">
+
+<h2>Configuración Automática</h2>
+
+<div class="config-card">
+
+<div class="config-title">Configuración recomendada</div>
+
+<div class="config-item">
+<span>General</span>
+<span>195</span>
+</div>
+
+<div class="config-item">
+<span>Punto rojo</span>
+<span>185</span>
+</div>
+
+<div class="config-item">
+<span>Mira 2x</span>
+<span>175</span>
+</div>
+
+<div class="config-item">
+<span>Mira 4x</span>
+<span>165</span>
+</div>
+
+<div class="config-item">
+<span>AWM</span>
+<span>120</span>
+</div>
+
+<button class="btn-big">VER SENSIBILIDAD</button>
+
+</div>
+
+</div>
+
+<div class="rating-box">
+
+<h3>Califica esta herramienta</h3>
+
+<div class="rating">
+★★★★★
+</div>
+
+<p>Configuración basada en pruebas de jugadores profesionales.</p>
+
 </div>
 
 <div class="box" id="buscador">
@@ -228,24 +299,6 @@ ESPACIO PARA ANUNCIO
 <button onclick="buscar()">Buscar</button>
 
 <div id="resultadoJugador" class="resultado"></div>
-
-</div>
-
-<div class="box" id="headshots">
-
-<h2>Configuración Recomendada para Pegar Todo Rojo</h2>
-
-<ul>
-
-<li>General: 180 - 200</li>
-<li>Punto rojo: 170 - 190</li>
-<li>Mira 2x: 150 - 180</li>
-<li>Mira 4x: 140 - 170</li>
-<li>AWM: 100 - 130</li>
-
-</ul>
-
-<p>Tamaño del botón de disparo recomendado: <b>60% - 75%</b></p>
 
 </div>
 
@@ -265,28 +318,20 @@ ESPACIO PARA ANUNCIO
 
 <div class="box">
 
-<h2>Personajes Populares de Free Fire</h2>
+<h2>Personajes Populares</h2>
 
 <div class="personajes">
 
 <div class="personaje">
-
 <img src="https://static.wikia.nocookie.net/freefire/images/8/8c/Alok.png">
-
 <h3>Alok</h3>
-
-<p>Personaje muy usado por su habilidad de curación y velocidad.</p>
-
+<p>Personaje muy usado por su habilidad de curación.</p>
 </div>
 
 <div class="personaje">
-
 <img src="https://static.wikia.nocookie.net/freefire/images/6/65/Kelly.png">
-
 <h3>Kelly</h3>
-
 <p>Personaje que aumenta la velocidad al correr.</p>
-
 </div>
 
 </div>
@@ -297,10 +342,6 @@ ESPACIO PARA ANUNCIO
 
 <h2>Contacto</h2>
 
-<p>
-Si quieres sugerir nuevos jugadores o tienes dudas sobre sensibilidades puedes contactarnos.
-</p>
-
 <p>Email: contacto@sensibilidadff.com</p>
 
 </div>
@@ -310,7 +351,7 @@ Si quieres sugerir nuevos jugadores o tienes dudas sobre sensibilidades puedes c
 <h2>Política de Privacidad</h2>
 
 <p>
-Este sitio puede usar cookies y servicios de terceros como Google AdSense para mostrar anuncios relevantes a los usuarios.
+Este sitio puede usar cookies y servicios como Google AdSense para mostrar anuncios.
 </p>
 
 </div>
@@ -335,8 +376,6 @@ if(telefono.includes("iphone")) base=160
 if(telefono.includes("samsung")) base=175
 if(telefono.includes("xiaomi")) base=180
 if(telefono.includes("oppo")) base=185
-if(telefono.includes("realme")) base=182
-if(telefono.includes("motorola")) base=178
 
 let general=base+Math.floor(Math.random()*20)
 let rojo=base+Math.floor(Math.random()*15)
@@ -357,18 +396,9 @@ AWM: ${awm}`
 let jugadores={
 
 "donato":"General 190 | Rojo 180 | 2x 170 | 4x 160 | AWM 120",
-
 "raistar":"General 200 | Rojo 190 | 2x 180 | 4x 170 | AWM 130",
-
 "white444":"General 195 | Rojo 185 | 2x 175 | 4x 165 | AWM 125",
-
-"ajjubhai":"General 185 | Rojo 170 | 2x 160 | 4x 150 | AWM 120",
-
-"culadoyt":"General 185 | Rojo 170 | 2x 160 | 4x 150 | AWM 110",
-
-"tinca":"General 180 | Rojo 165 | 2x 155 | 4x 145 | AWM 110",
-
-"twosidegamers":"General 190 | Rojo 175 | 2x 165 | 4x 155 | AWM 120"
+"ajjubhai":"General 185 | Rojo 170 | 2x 160 | 4x 150 | AWM 120"
 
 }
 
