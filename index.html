@@ -1,75 +1,81 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
 
-<title>Generador Pro de Sensibilidad Free Fire</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Generador automático de sensibilidad para Free Fire. Encuentra la mejor sensibilidad para pegar todo rojo.">
+<title>Generador de Sensibilidad Free Fire 2026 | Pegar Todo Rojo</title>
+
+<meta name="description" content="Generador automático de sensibilidad para Free Fire. Encuentra la mejor configuración para pegar todo rojo según tu celular.">
 
 <style>
 
 body{
-background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+font-family: Arial;
+background:#0f172a;
 color:white;
-font-family:Arial;
+margin:0;
 text-align:center;
+}
+
+header{
+background:#111827;
 padding:20px;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
 }
 
 .logo{
-width:320px;
-margin-bottom:20px;
+width:230px;
+margin-top:10px;
 }
 
-h1{
-color:#22c55e;
+.container{
+padding:20px;
 }
 
-select,button{
-
-padding:12px;
-margin:10px;
-font-size:16px;
+.box{
+background:#1f2937;
+padding:20px;
+margin:20px;
 border-radius:10px;
-border:none;
-
 }
 
 button{
-
-background:#22c55e;
+background:#ff7b00;
+border:none;
+padding:15px 25px;
+font-size:16px;
 color:white;
+border-radius:8px;
 cursor:pointer;
-font-weight:bold;
-
 }
 
 button:hover{
-
-background:#16a34a;
-
+background:#ff9d3c;
 }
 
-.card{
-
-background:#1e293b;
-padding:20px;
-border-radius:15px;
-margin-top:20px;
-
+.resultado{
+font-size:18px;
+margin-top:15px;
 }
 
-#resultado{
-
-margin-top:20px;
-font-size:20px;
-background:#020617;
+footer{
+margin-top:40px;
 padding:20px;
-border-radius:15px;
-border:2px solid #22c55e;
-box-shadow:0 0 25px #22c55e;
+background:#111827;
+}
 
+ul{
+text-align:left;
+max-width:600px;
+margin:auto;
 }
 
 </style>
@@ -78,220 +84,202 @@ box-shadow:0 0 25px #22c55e;
 
 <body>
 
-<img class="logo" src="https://1000logos.net/wp-content/uploads/2021/09/Free-Fire-logo.png">
+<header>
 
-<h1>Generador de Sensibilidad PRO</h1>
+<h1>🔥 Generador de Sensibilidad Free Fire</h1>
 
-<div class="card">
+<img class="logo" src="https://upload.wikimedia.org/wikipedia/en/0/0f/Garena_Free_Fire_logo.png">
 
-<h3>Marca de tu celular</h3>
+<nav>
 
-<select id="device">
+<a href="#guia">Guía</a>
+<a href="#generador">Generador</a>
+<a href="#headshots">Headshots</a>
+<a href="#pro">Sensibilidades Pro</a>
 
-<option value="samsung">Samsung</option>
-<option value="xiaomi">Xiaomi</option>
-<option value="oppo">Oppo</option>
-<option value="iphone">iPhone</option>
-<option value="realme">Realme</option>
-<option value="motorola">Motorola</option>
-<option value="huawei">Huawei</option>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="box" id="guia">
+
+<h2>Guía de Sensibilidad Free Fire</h2>
+
+<p>
+La sensibilidad en Free Fire es uno de los factores más importantes para mejorar la precisión en el juego. Una buena configuración permite controlar mejor la mira y hacer más headshots.
+</p>
+
+<p>
+El objetivo de este generador es ayudarte a encontrar una configuración equilibrada según tu dispositivo. Puedes generar diferentes sensibilidades hasta encontrar la que mejor se adapte a tu estilo de juego.
+</p>
+
+<p>
+Recuerda que cada celular puede reaccionar diferente dependiendo del FPS y el DPI de la pantalla.
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h2>¿Qué hace cada sensibilidad?</h2>
+
+<ul>
+
+<li><b>General:</b> controla el movimiento de la cámara.</li>
+
+<li><b>Punto Rojo:</b> ayuda a apuntar mejor con armas de corto alcance.</li>
+
+<li><b>Mira 2x:</b> mejora la precisión en combates a media distancia.</li>
+
+<li><b>Mira 4x:</b> ayuda a controlar rifles como AK o SCAR.</li>
+
+<li><b>AWM:</b> controla la sensibilidad del francotirador.</li>
+
+</ul>
+
+</div>
+
+
+<div class="box" id="generador">
+
+<h2>Generar Sensibilidad</h2>
+
+<label>Selecciona tu celular</label>
+
+<br><br>
+
+<select>
+
+<option>Samsung</option>
+<option>Xiaomi</option>
+<option>iPhone</option>
+<option>Oppo</option>
+<option>Motorola</option>
+<option>Realme</option>
 
 </select>
 
-<h3>FPS del juego</h3>
-
-<select id="fps">
-
-<option value="60">60 FPS</option>
-<option value="90">90 FPS</option>
-<option value="120">120 FPS</option>
-
-</select>
-
-<h3>DPI de tu celular</h3>
-
-<select id="dpi">
-
-<option value="400">400</option>
-<option value="500">500</option>
-<option value="600">600</option>
-<option value="700">700</option>
-
-</select>
-
-<br>
+<br><br>
 
 <button onclick="generar()">Generar Sensibilidad</button>
 
-<button onclick="canal()">Seguir mi canal</button>
+<div class="resultado" id="resultado"></div>
 
 </div>
 
-<div id="resultado"></div>
 
-<div class="card">
+<div class="box" id="headshots">
 
-<h2>Sensibilidades de jugadores famosos</h2>
+<h2>Configuración para Pegar Todo Rojo</h2>
 
-<p>
+<p>Estas configuraciones suelen ayudar a mejorar los headshots:</p>
 
-🔥 Raistar  
-<br>General 190  
-<br>Punto Rojo 185  
-<br>Mira 2X 175  
-<br>Mira 4X 165
+<ul>
 
-</p>
+<li>General: 180 - 200</li>
+<li>Punto rojo: 170 - 190</li>
+<li>Mira 2x: 150 - 180</li>
+<li>Mira 4x: 140 - 170</li>
+<li>AWM: 100 - 130</li>
 
-<p>
-
-🎯 White444  
-<br>General 180  
-<br>Punto Rojo 175  
-<br>Mira 2X 165  
-<br>Mira 4X 155
-
-</p>
+</ul>
 
 <p>
-
-⚡ Nobru  
-<br>General 170  
-<br>Punto Rojo 165  
-<br>Mira 2X 155  
-<br>Mira 4X 145
-
+También se recomienda usar un tamaño de botón de disparo entre <b>60% y 75%</b> para tener mejor control al disparar.
 </p>
 
 </div>
 
-<div class="card">
 
-<h2>Jugadores que usaron el generador</h2>
+<div class="box" id="pro">
+
+<h2>Sensibilidades de Jugadores Pro</h2>
+
+<p><b>SensiProYT</b></p>
+
+<p>
+General: 190<br>
+Punto rojo: 170<br>
+Mira 2x: 160<br>
+Mira 4x: 150<br>
+AWM: 120
+</p>
+
+<br>
+
+<p><b>HeadshotMaster</b></p>
+
+<p>
+General: 185<br>
+Punto rojo: 165<br>
+Mira 2x: 155<br>
+Mira 4x: 145<br>
+AWM: 110
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h2>Visitantes del sitio</h2>
 
 <p id="contador">0</p>
 
 </div>
 
+</div>
+
+
+<footer>
+
+<p>Herramienta creada para jugadores de Free Fire.</p>
+
+<p>© 2026 Generador de Sensibilidad</p>
+
+</footer>
+
+
 <script>
-
-function canal(){
-
-window.open("https://youtube.com/@julixnxzz","_blank");
-
-}
 
 function generar(){
 
-let device=document.getElementById("device").value;
-let fps=document.getElementById("fps").value;
-let dpi=document.getElementById("dpi").value;
-
-let general;
-let rojo;
-let mira2;
-let mira4;
-let boton;
-
-if(device=="samsung"){
-
-general=180+Math.floor(Math.random()*20);
-rojo=170+Math.floor(Math.random()*20);
-mira2=160+Math.floor(Math.random()*20);
-mira4=150+Math.floor(Math.random()*20);
-boton=55;
-
-}
-
-if(device=="xiaomi"){
-
-general=185+Math.floor(Math.random()*15);
-rojo=175+Math.floor(Math.random()*15);
-mira2=165+Math.floor(Math.random()*15);
-mira4=155+Math.floor(Math.random()*15);
-boton=60;
-
-}
-
-if(device=="oppo"){
-
-general=175+Math.floor(Math.random()*20);
-rojo=165+Math.floor(Math.random()*20);
-mira2=155+Math.floor(Math.random()*20);
-mira4=145+Math.floor(Math.random()*20);
-boton=58;
-
-}
-
-if(device=="iphone"){
-
-general=170+Math.floor(Math.random()*20);
-rojo=160+Math.floor(Math.random()*20);
-mira2=150+Math.floor(Math.random()*20);
-mira4=140+Math.floor(Math.random()*20);
-boton=50;
-
-}
-
-if(device=="realme"){
-
-general=185+Math.floor(Math.random()*15);
-rojo=175+Math.floor(Math.random()*15);
-mira2=165+Math.floor(Math.random()*15);
-mira4=155+Math.floor(Math.random()*15);
-boton=60;
-
-}
-
-if(device=="motorola"){
-
-general=180+Math.floor(Math.random()*20);
-rojo=170+Math.floor(Math.random()*20);
-mira2=160+Math.floor(Math.random()*20);
-mira4=150+Math.floor(Math.random()*20);
-boton=58;
-
-}
-
-if(device=="huawei"){
-
-general=175+Math.floor(Math.random()*20);
-rojo=165+Math.floor(Math.random()*20);
-mira2=155+Math.floor(Math.random()*20);
-mira4=145+Math.floor(Math.random()*20);
-boton=57;
-
-}
+let general = Math.floor(Math.random()*200)+1
+let rojo = Math.floor(Math.random()*200)+1
+let mira2 = Math.floor(Math.random()*200)+1
+let mira4 = Math.floor(Math.random()*200)+1
+let awm = Math.floor(Math.random()*200)+1
 
 document.getElementById("resultado").innerHTML=
 
-"🎯 General: "+general+"<br>"+
-"🔴 Punto Rojo: "+rojo+"<br>"+
-"🔎 Mira 2X: "+mira2+"<br>"+
-"🔭 Mira 4X: "+mira4+"<br>"+
-"⚙ DPI recomendado: "+dpi+"<br>"+
-"🔘 Tamaño botón disparo: "+boton;
-
-let visitas=localStorage.getItem("visitas");
-
-if(visitas==null){
-
-visitas=1;
-
-}else{
-
-visitas=parseInt(visitas)+1;
+`
+General: ${general} <br>
+Punto Rojo: ${rojo} <br>
+Mira 2x: ${mira2} <br>
+Mira 4x: ${mira4} <br>
+AWM: ${awm}
+`
 
 }
 
-localStorage.setItem("visitas",visitas);
+let visitas = localStorage.getItem("visitas")
 
-document.getElementById("contador").innerText=visitas;
+if(!visitas){
+
+visitas = 0
 
 }
+
+visitas++
+
+localStorage.setItem("visitas", visitas)
+
+document.getElementById("contador").innerText = visitas
 
 </script>
 
 </body>
-
 </html>
