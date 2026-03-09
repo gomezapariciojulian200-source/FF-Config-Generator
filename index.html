@@ -7,9 +7,9 @@
 
 <title>Generador de Sensibilidad Free Fire | Pegar Todo Rojo</title>
 
-<meta name="description" content="Generador de sensibilidad Free Fire para pegar todo rojo. Encuentra configuraciones de jugadores famosos y mejora tus headshots.">
+<meta name="description" content="Generador de sensibilidad Free Fire para pegar todo rojo automáticamente según tu celular.">
 
-<meta name="keywords" content="sensibilidad free fire, pegar todo rojo free fire, configuracion free fire headshots">
+<meta name="keywords" content="sensibilidad free fire, pegar todo rojo free fire, mejor sensibilidad free fire">
 
 <style>
 
@@ -75,7 +75,6 @@ font-size:18px;
 background:#2d3748;
 margin:20px;
 padding:30px;
-text-align:center;
 border-radius:8px;
 }
 
@@ -85,13 +84,7 @@ padding:20px;
 margin-top:40px;
 }
 
-ul{
-text-align:left;
-max-width:650px;
-margin:auto;
-}
-
-/* banner gamer */
+/* banner */
 
 .banner{
 background-image:url("https://wallpapercave.com/wp/wp10495959.jpg");
@@ -103,9 +96,9 @@ padding:120px 20px;
 .banner h1{
 font-size:40px;
 background:rgba(0,0,0,0.6);
-display:inline-block;
 padding:20px;
 border-radius:10px;
+display:inline-block;
 }
 
 /* personajes */
@@ -129,7 +122,7 @@ width:100%;
 border-radius:10px;
 }
 
-/* tarjeta configuración estilo app */
+/* tarjeta */
 
 .config-card{
 background:#0b0b0b;
@@ -137,13 +130,6 @@ padding:20px;
 border-radius:12px;
 max-width:400px;
 margin:auto;
-box-shadow:0 0 10px rgba(0,0,0,0.6);
-}
-
-.config-title{
-font-size:22px;
-font-weight:bold;
-margin-bottom:10px;
 }
 
 .config-item{
@@ -160,15 +146,8 @@ border:none;
 border-radius:30px;
 font-size:18px;
 color:white;
-cursor:pointer;
 margin-top:15px;
 }
-
-.btn-big:hover{
-background:#16a34a;
-}
-
-/* estrellas */
 
 .rating{
 font-size:24px;
@@ -199,9 +178,8 @@ margin:20px auto;
 <h1>Generador de Sensibilidad Free Fire</h1>
 
 <nav>
-<a href="#guia">Guía</a>
 <a href="#generador">Generador</a>
-<a href="#buscador">Jugadores</a>
+<a href="#jugadores">Jugadores</a>
 <a href="#contacto">Contacto</a>
 </nav>
 
@@ -209,18 +187,12 @@ margin:20px auto;
 
 <div class="container">
 
-<div class="box" id="guia">
+<div class="box">
 
-<h2>Guía Completa de Sensibilidad</h2>
+<h2>Tu dispositivo detectado</h2>
 
-<p>
-La sensibilidad en Free Fire determina qué tan rápido se mueve la mira. Ajustarla correctamente puede ayudarte a conseguir más headshots.
-</p>
+<p id="telefonoDetectado">Detectando...</p>
 
-</div>
-
-<div class="ad">
-ESPACIO PARA ANUNCIO
 </div>
 
 <div class="box" id="generador">
@@ -237,13 +209,15 @@ ESPACIO PARA ANUNCIO
 
 </div>
 
+<div class="ad">
+ESPACIO PARA ANUNCIO
+</div>
+
 <div class="box">
 
 <h2>Configuración Automática</h2>
 
 <div class="config-card">
-
-<div class="config-title">Configuración recomendada</div>
 
 <div class="config-item">
 <span>General</span>
@@ -284,11 +258,9 @@ ESPACIO PARA ANUNCIO
 ★★★★★
 </div>
 
-<p>Configuración basada en pruebas de jugadores profesionales.</p>
-
 </div>
 
-<div class="box" id="buscador">
+<div class="box" id="jugadores">
 
 <h2>Buscar Sensibilidad de Jugadores</h2>
 
@@ -298,21 +270,7 @@ ESPACIO PARA ANUNCIO
 
 <button onclick="buscar()">Buscar</button>
 
-<div id="resultadoJugador" class="resultado"></div>
-
-</div>
-
-<div class="box">
-
-<h2>Jugadores Populares</h2>
-
-<p>Donato</p>
-<p>Raistar</p>
-<p>White444</p>
-<p>Ajjubhai</p>
-<p>Two Side Gamers</p>
-<p>CuladoYT</p>
-<p>Tinca</p>
+<div id="resultadoJugador"></div>
 
 </div>
 
@@ -325,13 +283,11 @@ ESPACIO PARA ANUNCIO
 <div class="personaje">
 <img src="https://static.wikia.nocookie.net/freefire/images/8/8c/Alok.png">
 <h3>Alok</h3>
-<p>Personaje muy usado por su habilidad de curación.</p>
 </div>
 
 <div class="personaje">
 <img src="https://static.wikia.nocookie.net/freefire/images/6/65/Kelly.png">
 <h3>Kelly</h3>
-<p>Personaje que aumenta la velocidad al correr.</p>
 </div>
 
 </div>
@@ -346,16 +302,6 @@ ESPACIO PARA ANUNCIO
 
 </div>
 
-<div class="box">
-
-<h2>Política de Privacidad</h2>
-
-<p>
-Este sitio puede usar cookies y servicios como Google AdSense para mostrar anuncios.
-</p>
-
-</div>
-
 </div>
 
 <footer>
@@ -366,22 +312,45 @@ Este sitio puede usar cookies y servicios como Google AdSense para mostrar anunc
 
 <script>
 
+function detectarCelular(){
+
+let userAgent=navigator.userAgent.toLowerCase()
+
+let telefono="Desconocido"
+
+if(userAgent.includes("iphone")) telefono="iPhone"
+else if(userAgent.includes("samsung")) telefono="Samsung"
+else if(userAgent.includes("xiaomi")) telefono="Xiaomi"
+else if(userAgent.includes("oppo")) telefono="Oppo"
+else if(userAgent.includes("huawei")) telefono="Huawei"
+else if(userAgent.includes("realme")) telefono="Realme"
+
+document.getElementById("telefonoDetectado").innerHTML=telefono
+
+}
+
+window.onload=detectarCelular
+
 function generar(){
 
 let telefono=document.getElementById("telefono").value.toLowerCase()
 
 let base=170
 
-if(telefono.includes("iphone")) base=160
+if(telefono.includes("iphone")) base=165
 if(telefono.includes("samsung")) base=175
 if(telefono.includes("xiaomi")) base=180
-if(telefono.includes("oppo")) base=185
+if(telefono.includes("oppo")) base=178
 
-let general=base+Math.floor(Math.random()*20)
-let rojo=base+Math.floor(Math.random()*15)
-let mira2=base-10+Math.floor(Math.random()*20)
-let mira4=base-20+Math.floor(Math.random()*20)
-let awm=100+Math.floor(Math.random()*30)
+function limitar(valor){
+return Math.min(valor,200)
+}
+
+let general=limitar(base+Math.floor(Math.random()*15))
+let rojo=limitar(base+Math.floor(Math.random()*10))
+let mira2=limitar(base-10+Math.floor(Math.random()*20))
+let mira4=limitar(base-20+Math.floor(Math.random()*20))
+let awm=limitar(90+Math.floor(Math.random()*30))
 
 document.getElementById("resultado").innerHTML=
 
@@ -398,7 +367,14 @@ let jugadores={
 "donato":"General 190 | Rojo 180 | 2x 170 | 4x 160 | AWM 120",
 "raistar":"General 200 | Rojo 190 | 2x 180 | 4x 170 | AWM 130",
 "white444":"General 195 | Rojo 185 | 2x 175 | 4x 165 | AWM 125",
-"ajjubhai":"General 185 | Rojo 170 | 2x 160 | 4x 150 | AWM 120"
+"ajjubhai":"General 185 | Rojo 170 | 2x 160 | 4x 150 | AWM 120",
+"two side gamers":"General 188 | Rojo 178 | 2x 168 | 4x 158 | AWM 120",
+"culadoyt":"General 185 | Rojo 175 | 2x 165 | 4x 155 | AWM 115",
+"tinca":"General 180 | Rojo 170 | 2x 160 | 4x 150 | AWM 110",
+"ruok":"General 198 | Rojo 188 | 2x 178 | 4x 168 | AWM 130",
+"sk sabir":"General 190 | Rojo 180 | 2x 170 | 4x 160 | AWM 120",
+"lokesh gamer":"General 185 | Rojo 175 | 2x 165 | 4x 155 | AWM 120",
+"gyan gaming":"General 182 | Rojo 172 | 2x 162 | 4x 152 | AWM 115"
 
 }
 
@@ -407,13 +383,9 @@ function buscar(){
 let nombre=document.getElementById("buscarJugador").value.toLowerCase()
 
 if(jugadores[nombre]){
-
 document.getElementById("resultadoJugador").innerHTML=jugadores[nombre]
-
 }else{
-
 document.getElementById("resultadoJugador").innerHTML="Jugador no encontrado"
-
 }
 
 }
